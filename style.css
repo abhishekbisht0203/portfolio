@@ -325,19 +325,22 @@ section .title::after{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px 0;
+    /* Increased vertical padding for a clear gap above/below rows */
+    padding: 80px 0; 
     background: #111;
     cursor: pointer;
 }
 .container .box
 {
     position: relative;
+    /* Slightly increased height for content */
     width: 320px;
-    height: 400px;
+    height: 450px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 30px;
+    /* Increased vertical margin for gap between upper and lower cards */
+    margin: 60px 30px; 
     transition: 0.5s;
 }
 .container .box::before
@@ -413,7 +416,7 @@ section .title::after{
     background:rgba(255, 255, 255, 0.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    backdrop-filter: blur(10ox);
+    backdrop-filter: blur(10px);
     z-index: 1;
     transition: 0.5s;
     color: #fff;
@@ -421,8 +424,9 @@ section .title::after{
 }
 .container .box:hover .content
 {
-    left: -25px;
-    padding:60px 40px ;
+    /* Adjusted padding and left shift to keep text visible */
+    left: -15px; 
+    padding:40px 30px ; 
 }
 .container .box .content h2
 {
@@ -459,7 +463,7 @@ section .title::after{
     bottom: 0;
     z-index: 50;
     pointer-events: none;
-  
+ 
 }
 .container .box span::before
 {
@@ -477,12 +481,15 @@ section .title::after{
     animation: animate 2s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 05);
 }
+
+/* --- FIX: TOP LEFT LOGO POSITIONING --- */
+/* The 'top: -70px' moves the 100px logo almost entirely above the card. */
 .container .box:hover #first::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2334/PNG/512/pen_tool_anchor_point_design_icon_142354.png") no-repeat;
     background-size: 100px;
@@ -491,10 +498,10 @@ section .title::after{
 }
 .container .box:hover #second::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/1145/PNG/512/codeoutlinedprogrammingsigns_81143.png") no-repeat;
     background-size: 100px;
@@ -503,10 +510,10 @@ section .title::after{
 }
 .container .box:hover #third::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2066/PNG/512/search_icon_125165.png") no-repeat;
     background-size: 100px;
@@ -515,10 +522,10 @@ section .title::after{
 }
 .container .box:hover #fourth::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png") no-repeat;
     background-size: 100px;
@@ -527,10 +534,10 @@ section .title::after{
 }
 .container .box:hover #fifth::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/620/PNG/512/bars-chart-ascending_icon-icons.com_56865.png") no-repeat;
     background-size: 100px;
@@ -539,21 +546,24 @@ section .title::after{
 }
 .container .box:hover #sixth::before 
 {
-    top: -50px;
+    top: -70px;
     left: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/936/PNG/512/android-character-symbol_icon-icons.com_73684.png") no-repeat;
     background-size: 100px;
     background-position: center;
     filter:invert(100%);
 }
+/* --- END FIX: TOP LEFT LOGO POSITIONING --- */
+
+
 .container .box span::after
 {
     content: '';
     position: absolute;
-    bottom:  0;
+    bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -567,12 +577,14 @@ section .title::after{
     animation-delay: -1s;
 }
 
+/* --- FIX: BOTTOM RIGHT LOGO POSITIONING --- */
+/* The 'bottom: -30px' ensures a cleaner separation from the bottom edge. */
 .container .box:hover #sixth::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/936/PNG/512/android-character-symbol_icon-icons.com_73684.png") no-repeat;
     background-size: 100px;
@@ -580,10 +592,10 @@ section .title::after{
 }
 .container .box:hover #fifth::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/620/PNG/512/bars-chart-ascending_icon-icons.com_56865.png") no-repeat;
     background-size: 100px;
@@ -592,10 +604,10 @@ section .title::after{
 
 .container .box:hover #fourth::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png") no-repeat;
     background-size: 100px;
@@ -603,10 +615,10 @@ section .title::after{
 }
 .container .box:hover #third::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2066/PNG/512/search_icon_125165.png") no-repeat;
     background-size: 100px;
@@ -614,10 +626,10 @@ section .title::after{
 }
 .container .box:hover #second::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/1145/PNG/512/codeoutlinedprogrammingsigns_81143.png") no-repeat;
     background-size: 100px;
@@ -625,15 +637,17 @@ section .title::after{
 }
 .container .box:hover #first::after
 {
-    bottom: -50px;
+    bottom: -30px; 
     right: 50px;
     width: 100px;
-    height: 100px;  
+    height: 100px; 
     opacity: 1;
     background: url("https://cdn.icon-icons.com/icons2/2334/PNG/512/pen_tool_anchor_point_design_icon_142354.png") no-repeat;
     background-size: 100px;
     background-position: center;
 }
+/* --- END FIX: BOTTOM RIGHT LOGO POSITIONING --- */
+
 @keyframes animate
 {
     0%,100%
@@ -645,6 +659,7 @@ section .title::after{
         transform: translateY(-10px);
     }
 }
+
 
 /* skills section styling */
 
@@ -719,23 +734,42 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 50%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
+
+/* --- UPDATED PROGRESS BAR WIDTHS --- */
+
+/* Python - 85% */
+.skills-content .right .python::before{
     width: 85%;
 }
-.skills-content .right .wordpress::before{
+
+/* React - 70% */
+.skills-content .right .react::before{
+    width: 70%;
+}
+
+/* Django REST Framework - 75% */
+.skills-content .right .drf::before{
     width: 75%;
+}
+
+/* FastAPI / Node.js - 65% */
+.skills-content .right .fastapi::before{
+    width: 70%;
+}
+
+/* PostgreSQL / MongoDB - 70% */
+.skills-content .right .databases::before{
+    width: 70%;
+}
+
+/* Tailwind CSS - 80% */
+.skills-content .right .tailwind::before{
+    width: 80%;
+}
+
+/* HTML / CSS / JavaScript - 90% */
+.skills-content .right .frontend::before{
+    width: 90%;
 }
 
 

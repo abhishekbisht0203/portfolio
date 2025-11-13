@@ -35,24 +35,42 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Full Stack Developer","Front end developer", "Designer", "Python Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-    var typed = new Typed(".typing-3", {
-        strings: ["Connect with me on :)"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    // 🎯 Hero Section: Professional, core competencies
+    strings: [
+        "Full Stack Developer", 
+        "Backend Engineer", 
+        "React Developer", 
+        "Python/Django Expert"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Full Stack Developer","Fresher" ,"Python Developer", "Front end developer", "Back end developer", "Designer",],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+var typed = new Typed(".typing-3", {
+    // 🎯 Contact CTA: This is good as-is
+    strings: [
+        "Connect with me on :)"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
+
+var typed = new Typed(".typing-2", {
+    // 🎯 About/Contact Page: Broader set of technical roles, removing "Fresher"
+    strings: [
+        "Full Stack Developer", 
+        "Python Developer", 
+        "Django/FastAPI Specialist", 
+        "Frontend Developer", 
+        "Backend Developer", 
+        "MERN Stack Enthusiast"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
 
     // owl carousel script
     $('.carousel').owlCarousel({
